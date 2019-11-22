@@ -28,4 +28,11 @@ class HomeController extends Controller
         $penawaran = Penawaran::all();
         return view('home', ['penawaran' => $penawaran]);
     }
+
+
+    public function show(Penawaran $penawaran)
+    {
+        //
+        return view('home.show', compact('Penawaran'));
+    }
 }
